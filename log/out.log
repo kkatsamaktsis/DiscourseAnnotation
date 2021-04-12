@@ -1,0 +1,1181 @@
+=======================================================================
+
+Performing Discourse Simplification for file: input.txt
+
+=======================================================================
+
+DiscourseSimplifier initialized
+
+
+{
+    "attribution_verbs" : [
+        "comment",
+        "have faith in",
+        "consider",
+        "demand",
+        "apprise",
+        "report",
+        "evince",
+        "identify",
+        "enlighten",
+        "utter",
+        "ruminate",
+        "give away",
+        "discern",
+        "hold",
+        "acknowledge",
+        "explain",
+        "hypothesize",
+        "forbid",
+        "shout",
+        "theorise",
+        "betray",
+        "turn down",
+        "traverse",
+        "pipe up",
+        "cogitate",
+        "confide",
+        "hope",
+        "dispute",
+        "notify",
+        "conjecture",
+        "televise",
+        "signify",
+        "read",
+        "propose",
+        "void",
+        "express",
+        "perceive",
+        "mention",
+        "meditate",
+        "insist",
+        "presume",
+        "judge",
+        "compute",
+        "speculate",
+        "discuss",
+        "counter",
+        "reveal",
+        "contradict",
+        "conceive",
+        "proclaim",
+        "hypothesise",
+        "ascertain",
+        "signal",
+        "mean",
+        "respond",
+        "prohibit",
+        "signify",
+        "weight",
+        "urge",
+        "repudiate",
+        "pronounce",
+        "deduce",
+        "asseverate",
+        "design",
+        "expect",
+        "critique",
+        "adjudge",
+        "enounce",
+        "wonder",
+        "educate",
+        "detect",
+        "deliberate",
+        "confess",
+        "rehearse",
+        "publish",
+        "verbalize",
+        "veto",
+        "state",
+        "suspect",
+        "disprove",
+        "blur",
+        "manifest",
+        "disclose",
+        "reiterate",
+        "avow",
+        "slur",
+        "disagree",
+        "communicate",
+        "enunciate",
+        "disallow",
+        "disclaim",
+        "contemplate",
+        "reason",
+        "brood",
+        "imagine",
+        "distinguish",
+        "estimate",
+        "narrate",
+        "surmise",
+        "remark",
+        "theorize",
+        "clarify",
+        "study",
+        "disavow",
+        "keep back",
+        "recollect",
+        "display",
+        "admit",
+        "credit",
+        "belie",
+        "entertain",
+        "verbalise",
+        "dismiss",
+        "argue",
+        "think",
+        "recite",
+        "invalidate",
+        "abjure",
+        "speak up",
+        "feel",
+        "relate",
+        "renounce",
+        "articulate",
+        "assess",
+        "instruct",
+        "guess",
+        "esteem",
+        "trust",
+        "teach",
+        "speak",
+        "ventilate",
+        "guess",
+        "edify",
+        "acquaint",
+        "connote",
+        "vocalize",
+        "question",
+        "mediate",
+        "submit",
+        "mark",
+        "indicate",
+        "iterate",
+        "whisper",
+        "familiarize",
+        "tell",
+        "garble",
+        "offer",
+        "share",
+        "expose",
+        "regard",
+        "refuse",
+        "muse",
+        "clue",
+        "assert",
+        "observe",
+        "differentiate",
+        "argue against",
+        "recount",
+        "believe",
+        "count",
+        "reflect on",
+        "affirm",
+        "recall",
+        "anticipate",
+        "spill",
+        "controvert",
+        "air",
+        "warn",
+        "record",
+        "suppose",
+        "espouse",
+        "voice",
+        "declare",
+        "announce",
+        "exhibit",
+        "claim",
+        "gather",
+        "recognize",
+        "describe",
+        "influence",
+        "predicate",
+        "denote",
+        "say",
+        "deem",
+        "embrace",
+        "contest",
+        "sense",
+        "phrase",
+        "allege",
+        "publicise",
+        "surmise",
+        "ponder",
+        "discriminate",
+        "refute",
+        "agree",
+        "divulge",
+        "couch",
+        "note",
+        "discredit",
+        "reject",
+        "answer",
+        "oppose",
+        "advise",
+        "infer",
+        "bear in mind",
+        "repeat",
+        "intend",
+        "allow",
+        "mispronounce",
+        "reckon",
+        "familiarise",
+        "vocalise",
+        "make known",
+        "reflect",
+        "concede",
+        "purpose",
+        "recognise",
+        "recount",
+        "disown",
+        "broadcast",
+        "deny",
+        "let slip",
+        "renounce",
+        "remember",
+        "rationalize",
+        "assume",
+        "bid",
+        "register",
+        "make out",
+        "withhold",
+        "inform",
+        "command",
+        "unburden",
+        "publicize",
+        "recant",
+        "order",
+        "talk",
+        "know",
+        "promote",
+        "advertise",
+        "swear",
+        "emphasize",
+        "underline",
+        "testify",
+        "cite",
+        "message",
+        "ask"
+    ],
+    "cue_phrases" : {
+        "adverbial_phrases" : {
+            "matching" : "exact",
+            "phrases" : {
+                "after" : "TEMPORAL_AFTER_C",
+                "after(\\W(.*?\\W)?)(this|that)" : "TEMPORAL_AFTER_C",
+                "although" : "CONTRAST",
+                "and" : "LIST",
+                "and after" : "TEMPORAL_AFTER_C",
+                "and after(\\W(.*?\\W)?)(this|that)" : "TEMPORAL_AFTER_C",
+                "as" : "BACKGROUND",
+                "as a result" : "RESULT_C",
+                "as a result of" : "RESULT_C",
+                "as a result of(\\W(.*?\\W)?)(this|that)" : "RESULT_C",
+                "as a result(\\W(.*?\\W)?)(this|that)" : "RESULT_C",
+                "because" : "CAUSE_C",
+                "because(\\W(.*?\\W)?)(this|that)" : "CAUSE_C",
+                "before" : "TEMPORAL_BEFORE_C",
+                "before(\\W(.*?\\W)?)(this|that)" : "TEMPORAL_BEFORE_C",
+                "but" : "CONTRAST",
+                "but now" : "CONTRAST",
+                "despite" : "CONTRAST",
+                "even before" : "ELABORATION",
+                "even though" : "CONTRAST",
+                "even when" : "CONTRAST",
+                "except when" : "CONTRAST",
+                "for example" : "ELABORATION",
+                "further" : "ELABORATION",
+                "however" : "CONTRAST",
+                "if" : "CONDITION",
+                "in addition" : "LIST",
+                "in addition to" : "LIST",
+                "in case" : "CONDITION",
+                "instead" : "CONTRAST",
+                "more provocatively" : "ELABORATION",
+                "moreover" : "LIST",
+                "next" : "TEMPORAL_AFTER_C",
+                "now" : "BACKGROUND",
+                "once" : "BACKGROUND",
+                "or" : "DISJUNCTION",
+                "previously" : "TEMPORAL_BEFORE_C",
+                "previously(\\W(.*?\\W)?)(this|that)" : "TEMPORAL_BEFORE_C",
+                "rather" : "CONTRAST",
+                "recently" : "ELABORATION",
+                "since" : "CAUSE_C",
+                "since(\\W(.*?\\W)?)now" : "ELABORATION",
+                "so" : "ELABORATION",
+                "so far" : "ELABORATION",
+                "still" : "CONTRAST",
+                "then" : "TEMPORAL_AFTER_C",
+                "though" : "CONTRAST",
+                "thus" : "CONTRAST",
+                "unless" : "CONDITION",
+                "until" : "CONDITION",
+                "until recently" : "CONTRAST",
+                "when" : "BACKGROUND",
+                "where" : "ELABORATION",
+                "whereby" : "ELABORATION",
+                "whether" : "ELABORATION",
+                "while" : "CONTRAST",
+                "with" : "BACKGROUND",
+                "without" : "BACKGROUND",
+                "yet" : "CONTRAST"
+            }
+        },
+        "coordinating_phrases" : {
+            "matching" : "contained",
+            "phrases" : {
+                "after" : "TEMPORAL_AFTER_C",
+                "although" : "CONTRAST",
+                "and" : "LIST",
+                "and after" : "TEMPORAL_AFTER_C",
+                "as" : "BACKGROUND",
+                "as a result" : "RESULT_C",
+                "as a result of" : "RESULT_C",
+                "because" : "CAUSE_C",
+                "before" : "TEMPORAL_BEFORE_C",
+                "but" : "CONTRAST",
+                "but now" : "CONTRAST",
+                "despite" : "CONTRAST",
+                "even before" : "ELABORATION",
+                "even though" : "CONTRAST",
+                "even when" : "CONTRAST",
+                "except when" : "CONTRAST",
+                "for example" : "ELABORATION",
+                "further" : "ELABORATION",
+                "however" : "CONTRAST",
+                "if" : "CONDITION",
+                "in addition" : "LIST",
+                "in addition to" : "LIST",
+                "in case" : "CONDITION",
+                "instead" : "CONTRAST",
+                "more provocatively" : "ELABORATION",
+                "moreover" : "LIST",
+                "next" : "TEMPORAL_AFTER_C",
+                "now" : "BACKGROUND",
+                "once" : "BACKGROUND",
+                "or" : "DISJUNCTION",
+                "previously" : "TEMPORAL_BEFORE_C",
+                "rather" : "CONTRAST",
+                "recently" : "ELABORATION",
+                "since" : "CAUSE_C",
+                "since(\\W(.*?\\W)?)now" : "ELABORATION",
+                "so" : "ELABORATION",
+                "so far" : "ELABORATION",
+                "still" : "CONTRAST",
+                "then" : "TEMPORAL_AFTER_C",
+                "though" : "CONTRAST",
+                "thus" : "CONTRAST",
+                "unless" : "CONDITION",
+                "until" : "CONDITION",
+                "until recently" : "CONTRAST",
+                "when" : "BACKGROUND",
+                "where" : "ELABORATION",
+                "whereby" : "ELABORATION",
+                "whether" : "ELABORATION",
+                "while" : "CONTRAST",
+                "with" : "BACKGROUND",
+                "without" : "BACKGROUND",
+                "yet" : "CONTRAST"
+            }
+        },
+        "default_phrases" : {
+            "matching" : "contained",
+            "phrases" : {
+                "after" : "TEMPORAL_AFTER_C",
+                "although" : "CONTRAST",
+                "and" : "LIST",
+                "and after" : "TEMPORAL_AFTER_C",
+                "as" : "BACKGROUND",
+                "as a result" : "RESULT_C",
+                "as a result of" : "RESULT_C",
+                "because" : "CAUSE_C",
+                "before" : "TEMPORAL_BEFORE_C",
+                "but" : "CONTRAST",
+                "but now" : "CONTRAST",
+                "despite" : "CONTRAST",
+                "even before" : "ELABORATION",
+                "even though" : "CONTRAST",
+                "even when" : "CONTRAST",
+                "except when" : "CONTRAST",
+                "for example" : "ELABORATION",
+                "further" : "ELABORATION",
+                "however" : "CONTRAST",
+                "if" : "CONDITION",
+                "in addition" : "LIST",
+                "in addition to" : "LIST",
+                "in case" : "CONDITION",
+                "instead" : "CONTRAST",
+                "more provocatively" : "ELABORATION",
+                "moreover" : "LIST",
+                "next" : "TEMPORAL_AFTER_C",
+                "now" : "BACKGROUND",
+                "once" : "BACKGROUND",
+                "or" : "DISJUNCTION",
+                "previously" : "TEMPORAL_BEFORE_C",
+                "rather" : "CONTRAST",
+                "recently" : "ELABORATION",
+                "since" : "CAUSE_C",
+                "since(\\W(.*?\\W)?)now" : "ELABORATION",
+                "so" : "ELABORATION",
+                "so far" : "ELABORATION",
+                "still" : "CONTRAST",
+                "then" : "TEMPORAL_AFTER_C",
+                "though" : "CONTRAST",
+                "thus" : "CONTRAST",
+                "unless" : "CONDITION",
+                "until" : "CONDITION",
+                "until recently" : "CONTRAST",
+                "when" : "BACKGROUND",
+                "where" : "ELABORATION",
+                "whereby" : "ELABORATION",
+                "whether" : "ELABORATION",
+                "while" : "CONTRAST",
+                "with" : "BACKGROUND",
+                "without" : "BACKGROUND",
+                "yet" : "CONTRAST"
+            }
+        },
+        "subordinating_phrases" : {
+            "matching" : "contained",
+            "phrases" : {
+                "after" : "TEMPORAL_BEFORE",
+                "although" : "CONTRAST",
+                "and" : "LIST",
+                "and after" : "TEMPORAL_BEFORE",
+                "as" : "BACKGROUND",
+                "as a result" : "RESULT",
+                "as a result of" : "RESULT",
+                "because" : "CAUSE",
+                "before" : "TEMPORAL_AFTER",
+                "but" : "CONTRAST",
+                "but now" : "CONTRAST",
+                "despite" : "CONTRAST",
+                "even before" : "ELABORATION",
+                "even though" : "CONTRAST",
+                "even when" : "CONTRAST",
+                "except when" : "CONTRAST",
+                "for example" : "ELABORATION",
+                "further" : "ELABORATION",
+                "however" : "CONTRAST",
+                "if" : "CONDITION",
+                "in addition" : "LIST",
+                "in addition to" : "LIST",
+                "in case" : "CONDITION",
+                "instead" : "CONTRAST",
+                "more provocatively" : "ELABORATION",
+                "moreover" : "LIST",
+                "next" : "TEMPORAL_AFTER",
+                "now" : "BACKGROUND",
+                "once" : "BACKGROUND",
+                "or" : "DISJUNCTION",
+                "previously" : "TEMPORAL_AFTER",
+                "rather" : "CONTRAST",
+                "recently" : "ELABORATION",
+                "since" : "CAUSE",
+                "since(\\W(.*?\\W)?)now" : "ELABORATION",
+                "so" : "ELABORATION",
+                "so far" : "ELABORATION",
+                "still" : "CONTRAST",
+                "then" : "TEMPORAL_AFTER",
+                "though" : "CONTRAST",
+                "thus" : "CONTRAST",
+                "unless" : "CONDITION",
+                "until" : "CONDITION",
+                "until recently" : "CONTRAST",
+                "when" : "BACKGROUND",
+                "where" : "ELABORATION",
+                "whereby" : "ELABORATION",
+                "whether" : "ELABORATION",
+                "while" : "CONTRAST",
+                "with" : "BACKGROUND",
+                "without" : "BACKGROUND",
+                "yet" : "CONTRAST"
+            }
+        }
+    },
+    "ignored-relations" : [
+        "UNKNOWN_COORDINATION"
+    ],
+    "remove-brackets" : false,
+    "rules" : [
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ReferenceInitialConjunctionExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ReferenceInitialAdverbialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ReferenceMedialAdverbialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ReferenceFinalAdverbialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.CoordinationExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveRelativeClauseWhomExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveRelativeClauseWhoWhichExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveRelativeClauseWhereExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveRelativeClausePrepWhichWhoExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveRelativeClauseWhoseExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveAppositionExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.NonRestrictiveAppositionExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PurposePreExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPrePurposeExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SharedNPPreParticipalExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPreExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SharedNPPostCoordinationExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SharedNPPostParticipalExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPostPurposeExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PurposePostExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.QuotedAttributionPostExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPostAttributionExtractor2",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPostAttributionExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.SubordinationPostExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.QuotedAttributionPreExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PreAttributionExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ParticipialMiddleExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveRelativeClauseWhoWhichExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveRelativeClauseWhoseExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveRelativeClauseWithoutRelativePronounExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveRelativeClauseWhomExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PrepositionalAttachedtoVPExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.RestrictiveParticipialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.AdjectivalAdverbialMiddleFinalExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.AdjectivalAdverbialInitialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.LeadNPExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PrepositionalInitialExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.PrepositionalMiddleFinalExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ListNP.PreListNPExtractor",
+        "org.lambda3.text.simplification.discourse.runner.discourse_tree.extraction.rules.ListNP.PostListNPExtractor"
+    ]
+}
+
+
+# Processing sentence 1/1 #
+
+'Charles' Law states that at constant pressure, the volume of a gas increases or decreases by the same factor as its temperature.'
+
+### Step 1) CREATE SENTENCE DISCOURSE TREE ###
+
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... done [0,8 sec].
+
+Processing leaf:
+
+'Charles ' Law states that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .'
+
+Process leaf:
+
+ROOT
+#1
+└───────> S
+          #2
+          ├───────────────────────────────────────────────────────────────────> NP
+          |                                                                     #3
+          |                                                                     ├───────> NP
+          |                                                                     |         #4
+          |                                                                     |         ├───────> NNP
+          |                                                                     |         |         #5
+          |                                                                     |         |         └───────> Charles
+          |                                                                     |         |                   #6
+          |                                                                     |         └───────> POS
+          |                                                                     |                   #7
+          |                                                                     |                   └───────> '
+          |                                                                     |                             #8
+          |                                                                     └─────────────────> NN
+          |                                                                                         #9
+          |                                                                                         └───────> Law
+          |                                                                                                   #10
+          ├───────> VP
+          |         #11
+          |         ├─────────────────────────────────────────────────────────────────────────────> VBZ
+          |         |                                                                               #12
+          |         |                                                                               └───────> states
+          |         |                                                                                         #13
+          |         └───────> SBAR
+          |                   #14
+          |                   ├───────────────────────────────────────────────────────────────────> IN
+          |                   |                                                                     #15
+          |                   |                                                                     └───────> that
+          |                   |                                                                               #16
+          |                   └───────> S
+          |                             #17
+          |                             ├─────────────────────────────────────> PP
+          |                             |                                       #18
+          |                             |                                       ├─────────────────> IN
+          |                             |                                       |                   #19
+          |                             |                                       |                   └───────> at
+          |                             |                                       |                             #20
+          |                             |                                       └───────> NP
+          |                             |                                                 #21
+          |                             |                                                 ├───────> JJ
+          |                             |                                                 |         #22
+          |                             |                                                 |         └───────> constant
+          |                             |                                                 |                   #23
+          |                             |                                                 └───────> NN
+          |                             |                                                           #24
+          |                             |                                                           └───────> pressure
+          |                             |                                                                     #25
+          |                             ├─────────────────────────────────────────────────────────> ,
+          |                             |                                                           #26
+          |                             |                                                           └───────> ,
+          |                             |                                                                     #27
+          |                             ├───────────────────────────> NP
+          |                             |                             #28
+          |                             |                             ├─────────────────> NP
+          |                             |                             |                   #29
+          |                             |                             |                   ├───────> DT
+          |                             |                             |                   |         #30
+          |                             |                             |                   |         └───────> the
+          |                             |                             |                   |                   #31
+          |                             |                             |                   └───────> NN
+          |                             |                             |                             #32
+          |                             |                             |                             └───────> volume
+          |                             |                             |                                       #33
+          |                             |                             └───────> PP
+          |                             |                                       #34
+          |                             |                                       ├─────────────────> IN
+          |                             |                                       |                   #35
+          |                             |                                       |                   └───────> of
+          |                             |                                       |                             #36
+          |                             |                                       └───────> NP
+          |                             |                                                 #37
+          |                             |                                                 ├───────> DT
+          |                             |                                                 |         #38
+          |                             |                                                 |         └───────> a
+          |                             |                                                 |                   #39
+          |                             |                                                 └───────> NN
+          |                             |                                                           #40
+          |                             |                                                           └───────> gas
+          |                             |                                                                     #41
+          |                             └───────> VP
+          |                                       #42
+          |                                       ├───────────────────────────────────────────────> VBZ
+          |                                       |                                                 #43
+          |                                       |                                                 └───────> increases
+          |                                       |                                                           #44
+          |                                       ├───────────────────────────────────────────────> CC
+          |                                       |                                                 #45
+          |                                       |                                                 └───────> or
+          |                                       |                                                           #46
+          |                                       ├───────────────────────────────────────────────> VBZ
+          |                                       |                                                 #47
+          |                                       |                                                 └───────> decreases
+          |                                       |                                                           #48
+          |                                       └───────> PP
+          |                                                 #49
+          |                                                 ├─────────────────────────────────────> IN
+          |                                                 |                                       #50
+          |                                                 |                                       └───────> by
+          |                                                 |                                                 #51
+          |                                                 └───────> NP
+          |                                                           #52
+          |                                                           ├─────────────────> NP
+          |                                                           |                   #53
+          |                                                           |                   ├───────> DT
+          |                                                           |                   |         #54
+          |                                                           |                   |         └───────> the
+          |                                                           |                   |                   #55
+          |                                                           |                   ├───────> JJ
+          |                                                           |                   |         #56
+          |                                                           |                   |         └───────> same
+          |                                                           |                   |                   #57
+          |                                                           |                   └───────> NN
+          |                                                           |                             #58
+          |                                                           |                             └───────> factor
+          |                                                           |                                       #59
+          |                                                           └───────> PP
+          |                                                                     #60
+          |                                                                     ├─────────────────> IN
+          |                                                                     |                   #61
+          |                                                                     |                   └───────> as
+          |                                                                     |                             #62
+          |                                                                     └───────> NP
+          |                                                                               #63
+          |                                                                               ├───────> PRP$
+          |                                                                               |         #64
+          |                                                                               |         └───────> its
+          |                                                                               |                   #65
+          |                                                                               └───────> NN
+          |                                                                                         #66
+          |                                                                                         └───────> temperature
+          |                                                                                                   #67
+          └───────────────────────────────────────────────────────────────────────────────────────> .
+                                                                                                    #68
+                                                                                                    └───────> .
+                                                                                                              #69
+
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1,4 sec].
+
+Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1,0 sec].
+
+Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0,8 sec].
+
+Extraction rule SubordinationPostAttributionExtractor2 matched.
+
+Processing leaf:
+
+'At constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .'
+
+Process leaf:
+
+ROOT
+#1
+└───────> S
+          #2
+          ├─────────────────────────────────────> PP
+          |                                       #3
+          |                                       ├─────────────────> IN
+          |                                       |                   #4
+          |                                       |                   └───────> At
+          |                                       |                             #5
+          |                                       └───────> NP
+          |                                                 #6
+          |                                                 ├───────> JJ
+          |                                                 |         #7
+          |                                                 |         └───────> constant
+          |                                                 |                   #8
+          |                                                 └───────> NN
+          |                                                           #9
+          |                                                           └───────> pressure
+          |                                                                     #10
+          ├─────────────────────────────────────────────────────────> ,
+          |                                                           #11
+          |                                                           └───────> ,
+          |                                                                     #12
+          ├───────────────────────────> NP
+          |                             #13
+          |                             ├─────────────────> NP
+          |                             |                   #14
+          |                             |                   ├───────> DT
+          |                             |                   |         #15
+          |                             |                   |         └───────> the
+          |                             |                   |                   #16
+          |                             |                   └───────> NN
+          |                             |                             #17
+          |                             |                             └───────> volume
+          |                             |                                       #18
+          |                             └───────> PP
+          |                                       #19
+          |                                       ├─────────────────> IN
+          |                                       |                   #20
+          |                                       |                   └───────> of
+          |                                       |                             #21
+          |                                       └───────> NP
+          |                                                 #22
+          |                                                 ├───────> DT
+          |                                                 |         #23
+          |                                                 |         └───────> a
+          |                                                 |                   #24
+          |                                                 └───────> NN
+          |                                                           #25
+          |                                                           └───────> gas
+          |                                                                     #26
+          ├───────> VP
+          |         #27
+          |         ├───────────────────────────────────────────────> VBZ
+          |         |                                                 #28
+          |         |                                                 └───────> increases
+          |         |                                                           #29
+          |         ├───────────────────────────────────────────────> CC
+          |         |                                                 #30
+          |         |                                                 └───────> or
+          |         |                                                           #31
+          |         ├───────────────────────────────────────────────> VBZ
+          |         |                                                 #32
+          |         |                                                 └───────> decreases
+          |         |                                                           #33
+          |         └───────> PP
+          |                   #34
+          |                   ├─────────────────────────────────────> IN
+          |                   |                                       #35
+          |                   |                                       └───────> by
+          |                   |                                                 #36
+          |                   └───────> NP
+          |                             #37
+          |                             ├─────────────────> NP
+          |                             |                   #38
+          |                             |                   ├───────> DT
+          |                             |                   |         #39
+          |                             |                   |         └───────> the
+          |                             |                   |                   #40
+          |                             |                   ├───────> JJ
+          |                             |                   |         #41
+          |                             |                   |         └───────> same
+          |                             |                   |                   #42
+          |                             |                   └───────> NN
+          |                             |                             #43
+          |                             |                             └───────> factor
+          |                             |                                       #44
+          |                             └───────> PP
+          |                                       #45
+          |                                       ├─────────────────> IN
+          |                                       |                   #46
+          |                                       |                   └───────> as
+          |                                       |                             #47
+          |                                       └───────> NP
+          |                                                 #48
+          |                                                 ├───────> PRP$
+          |                                                 |         #49
+          |                                                 |         └───────> its
+          |                                                 |                   #50
+          |                                                 └───────> NN
+          |                                                           #51
+          |                                                           └───────> temperature
+          |                                                                     #52
+          └─────────────────────────────────────────────────────────> .
+                                                                      #53
+                                                                      └───────> .
+                                                                                #54
+
+Extraction rule PrepositionalInitialExtractor matched.
+
+Processing leaf:
+
+'The volume of a gas increases or decreases by the same factor as its temperature .'
+
+Process leaf:
+
+ROOT
+#1
+└───────> S
+          #2
+          ├───────────────────────────> NP
+          |                             #3
+          |                             ├─────────────────> NP
+          |                             |                   #4
+          |                             |                   ├───────> DT
+          |                             |                   |         #5
+          |                             |                   |         └───────> The
+          |                             |                   |                   #6
+          |                             |                   └───────> NN
+          |                             |                             #7
+          |                             |                             └───────> volume
+          |                             |                                       #8
+          |                             └───────> PP
+          |                                       #9
+          |                                       ├─────────────────> IN
+          |                                       |                   #10
+          |                                       |                   └───────> of
+          |                                       |                             #11
+          |                                       └───────> NP
+          |                                                 #12
+          |                                                 ├───────> DT
+          |                                                 |         #13
+          |                                                 |         └───────> a
+          |                                                 |                   #14
+          |                                                 └───────> NN
+          |                                                           #15
+          |                                                           └───────> gas
+          |                                                                     #16
+          ├───────> VP
+          |         #17
+          |         ├───────────────────────────────────────────────> VBZ
+          |         |                                                 #18
+          |         |                                                 └───────> increases
+          |         |                                                           #19
+          |         ├───────────────────────────────────────────────> CC
+          |         |                                                 #20
+          |         |                                                 └───────> or
+          |         |                                                           #21
+          |         ├───────────────────────────────────────────────> VBZ
+          |         |                                                 #22
+          |         |                                                 └───────> decreases
+          |         |                                                           #23
+          |         └───────> PP
+          |                   #24
+          |                   ├─────────────────────────────────────> IN
+          |                   |                                       #25
+          |                   |                                       └───────> by
+          |                   |                                                 #26
+          |                   └───────> NP
+          |                             #27
+          |                             ├─────────────────> NP
+          |                             |                   #28
+          |                             |                   ├───────> DT
+          |                             |                   |         #29
+          |                             |                   |         └───────> the
+          |                             |                   |                   #30
+          |                             |                   ├───────> JJ
+          |                             |                   |         #31
+          |                             |                   |         └───────> same
+          |                             |                   |                   #32
+          |                             |                   └───────> NN
+          |                             |                             #33
+          |                             |                             └───────> factor
+          |                             |                                       #34
+          |                             └───────> PP
+          |                                       #35
+          |                                       ├─────────────────> IN
+          |                                       |                   #36
+          |                                       |                   └───────> as
+          |                                       |                             #37
+          |                                       └───────> NP
+          |                                                 #38
+          |                                                 ├───────> PRP$
+          |                                                 |         #39
+          |                                                 |         └───────> its
+          |                                                 |                   #40
+          |                                                 └───────> NN
+          |                                                           #41
+          |                                                           └───────> temperature
+          |                                                                     #42
+          └─────────────────────────────────────────────────────────> .
+                                                                      #43
+                                                                      └───────> .
+                                                                                #44
+
+No model rule applied.
+
+Processing leaf:
+
+'This is at constant pressure .'
+
+Process leaf:
+
+ROOT
+#1
+└───────> S
+          #2
+          ├───────────────────────────> NP
+          |                             #3
+          |                             └───────> DT
+          |                                       #4
+          |                                       └───────> This
+          |                                                 #5
+          ├───────> VP
+          |         #6
+          |         ├───────────────────────────> VBZ
+          |         |                             #7
+          |         |                             └───────> is
+          |         |                                       #8
+          |         └───────> PP
+          |                   #9
+          |                   ├─────────────────> IN
+          |                   |                   #10
+          |                   |                   └───────> at
+          |                   |                             #11
+          |                   └───────> NP
+          |                             #12
+          |                             ├───────> JJ
+          |                             |         #13
+          |                             |         └───────> constant
+          |                             |                   #14
+          |                             └───────> NN
+          |                                       #15
+          |                                       └───────> pressure
+          |                                                 #16
+          └─────────────────────────────────────> .
+                                                  #17
+                                                  └───────> .
+                                                            #18
+
+No model rule applied.
+
+Processing leaf:
+
+'This is what Charles ' Law states .'
+
+Leaf will not be check.
+
+CO/UNKNOWN_COORDINATION (NULL, ROOT)
+└───n───> SUB/ATTRIBUTION (NULL, SubordinationPostAttributionExtractor2)
+          ├────────s────────> 'This is what Charles ' Law states .'
+          └───n───> SUB/UNKNOWN_SUBORDINATION (NULL, PrepositionalInitialExtractor)
+                    ├───s───> 'This is at constant pressure .'
+                    └───n───> 'The volume of a gas increases or decreases by the same factor as its temperature .'
+
+### STEP 2) DO DISCOURSE EXTRACTION ###
+
+# Charles' Law states that at constant pressure, the volume of a gas increases or decreases by the same factor as its temperature.
+
+a5d899ed09734feb937e774cf5a24461     0     The volume of a gas increases or decreases by the same factor as its temperature .
+	S:UNKNOWN_SUBORDINATION    This is at constant pressure .
+	S:ATTRIBUTION    This is what Charles ' Law states .
+
+
+### FINISHED
+
+done
+
+=======================================================================
+
+Performing Discourse Annotation for file: input.txt
+
+=======================================================================
+
+# Processing sentence 1/1 #
+
+'Charles' Law states that at constant pressure, the volume of a gas increases or decreases by the same factor as its temperature.'
+
+
+### Step 1) ANNOTATE SENTENCE ###
+
+Processing leaf:
+
+'Charles ' Law states that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .'
+
+Process leaf:
+
+ROOT
+#1
+└───────> S
+          #2
+          ├───────────────────────────────────────────────────────────────────> NP
+          |                                                                     #3
+          |                                                                     ├───────> NP
+          |                                                                     |         #4
+          |                                                                     |         ├───────> NNP
+          |                                                                     |         |         #5
+          |                                                                     |         |         └───────> Charles
+          |                                                                     |         |                   #6
+          |                                                                     |         └───────> POS
+          |                                                                     |                   #7
+          |                                                                     |                   └───────> '
+          |                                                                     |                             #8
+          |                                                                     └─────────────────> NN
+          |                                                                                         #9
+          |                                                                                         └───────> Law
+          |                                                                                                   #10
+          ├───────> VP
+          |         #11
+          |         ├─────────────────────────────────────────────────────────────────────────────> VBZ
+          |         |                                                                               #12
+          |         |                                                                               └───────> states
+          |         |                                                                                         #13
+          |         └───────> SBAR
+          |                   #14
+          |                   ├───────────────────────────────────────────────────────────────────> IN
+          |                   |                                                                     #15
+          |                   |                                                                     └───────> that
+          |                   |                                                                               #16
+          |                   └───────> S
+          |                             #17
+          |                             ├─────────────────────────────────────> PP
+          |                             |                                       #18
+          |                             |                                       ├─────────────────> IN
+          |                             |                                       |                   #19
+          |                             |                                       |                   └───────> at
+          |                             |                                       |                             #20
+          |                             |                                       └───────> NP
+          |                             |                                                 #21
+          |                             |                                                 ├───────> JJ
+          |                             |                                                 |         #22
+          |                             |                                                 |         └───────> constant
+          |                             |                                                 |                   #23
+          |                             |                                                 └───────> NN
+          |                             |                                                           #24
+          |                             |                                                           └───────> pressure
+          |                             |                                                                     #25
+          |                             ├─────────────────────────────────────────────────────────> ,
+          |                             |                                                           #26
+          |                             |                                                           └───────> ,
+          |                             |                                                                     #27
+          |                             ├───────────────────────────> NP
+          |                             |                             #28
+          |                             |                             ├─────────────────> NP
+          |                             |                             |                   #29
+          |                             |                             |                   ├───────> DT
+          |                             |                             |                   |         #30
+          |                             |                             |                   |         └───────> the
+          |                             |                             |                   |                   #31
+          |                             |                             |                   └───────> NN
+          |                             |                             |                             #32
+          |                             |                             |                             └───────> volume
+          |                             |                             |                                       #33
+          |                             |                             └───────> PP
+          |                             |                                       #34
+          |                             |                                       ├─────────────────> IN
+          |                             |                                       |                   #35
+          |                             |                                       |                   └───────> of
+          |                             |                                       |                             #36
+          |                             |                                       └───────> NP
+          |                             |                                                 #37
+          |                             |                                                 ├───────> DT
+          |                             |                                                 |         #38
+          |                             |                                                 |         └───────> a
+          |                             |                                                 |                   #39
+          |                             |                                                 └───────> NN
+          |                             |                                                           #40
+          |                             |                                                           └───────> gas
+          |                             |                                                                     #41
+          |                             └───────> VP
+          |                                       #42
+          |                                       ├───────────────────────────────────────────────> VBZ
+          |                                       |                                                 #43
+          |                                       |                                                 └───────> increases
+          |                                       |                                                           #44
+          |                                       ├───────────────────────────────────────────────> CC
+          |                                       |                                                 #45
+          |                                       |                                                 └───────> or
+          |                                       |                                                           #46
+          |                                       ├───────────────────────────────────────────────> VBZ
+          |                                       |                                                 #47
+          |                                       |                                                 └───────> decreases
+          |                                       |                                                           #48
+          |                                       └───────> PP
+          |                                                 #49
+          |                                                 ├─────────────────────────────────────> IN
+          |                                                 |                                       #50
+          |                                                 |                                       └───────> by
+          |                                                 |                                                 #51
+          |                                                 └───────> NP
+          |                                                           #52
+          |                                                           ├─────────────────> NP
+          |                                                           |                   #53
+          |                                                           |                   ├───────> DT
+          |                                                           |                   |         #54
+          |                                                           |                   |         └───────> the
+          |                                                           |                   |                   #55
+          |                                                           |                   ├───────> JJ
+          |                                                           |                   |         #56
+          |                                                           |                   |         └───────> same
+          |                                                           |                   |                   #57
+          |                                                           |                   └───────> NN
+          |                                                           |                             #58
+          |                                                           |                             └───────> factor
+          |                                                           |                                       #59
+          |                                                           └───────> PP
+          |                                                                     #60
+          |                                                                     ├─────────────────> IN
+          |                                                                     |                   #61
+          |                                                                     |                   └───────> as
+          |                                                                     |                             #62
+          |                                                                     └───────> NP
+          |                                                                               #63
+          |                                                                               ├───────> PRP$
+          |                                                                               |         #64
+          |                                                                               |         └───────> its
+          |                                                                               |                   #65
+          |                                                                               └───────> NN
+          |                                                                                         #66
+          |                                                                                         └───────> temperature
+          |                                                                                                   #67
+          └───────────────────────────────────────────────────────────────────────────────────────> .
+                                                                                                    #68
+                                                                                                    └───────> .
+                                                                                                              #69
+
+Extraction rule SubordinationPostAttributionExtractor2 matched.
+
+Extraction rule SubordinationPostAttributionExtractor matched.
+
+Extraction rule SubordinationPostExtractor matched.
+
+Annotation generated: 
+
+[SUB-POST-ATTR: Charles ' Law states] that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .
+
+
+Annotation generated: 
+
+Charles ' Law states that [SUB-POST: at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature] .
+
+
+### FINISHED
+
+-----------------------------------------------------------------------
+
+Sentence annotation: 
+
+[SUB-POST-ATTR: Charles ' Law states] that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .
+
+Sentence annotation: 
+
+Charles ' Law states that [SUB-POST: at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature] .
+
+-----------------------------------------------------------------------
+
+done
+

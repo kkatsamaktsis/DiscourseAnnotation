@@ -1,0 +1,5 @@
+id	label	alpha	text
+1	SubordinationPostAttributionExtractor2	a	Charles ' Law states that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .
+2	PrepositionalInitialExtractor	a	At constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .
+3	NONE	a	The volume of a gas increases or decreases by the same factor as its temperature .
+4	NONE	a	This is at constant pressure .

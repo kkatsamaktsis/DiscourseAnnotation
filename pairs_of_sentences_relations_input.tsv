@@ -1,0 +1,3 @@
+id	label	alpha	text
+1	ATTRIBUTION	a	This is what Charles ' Law states . [SEP] At constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .
+2	UNKNOWN_SUBORDINATION	a	This is at constant pressure . [SEP] The volume of a gas increases or decreases by the same factor as its temperature .

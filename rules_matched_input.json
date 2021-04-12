@@ -1,0 +1,13 @@
+[{
+  "text" : "Charles ' Law states that at constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .",
+  "rule" : "SubordinationPostAttributionExtractor2"
+}, {
+  "text" : "At constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .",
+  "rule" : "PrepositionalInitialExtractor"
+}, {
+  "text" : "The volume of a gas increases or decreases by the same factor as its temperature .",
+  "rule" : "NONE"
+}, {
+  "text" : "This is at constant pressure .",
+  "rule" : "NONE"
+}]

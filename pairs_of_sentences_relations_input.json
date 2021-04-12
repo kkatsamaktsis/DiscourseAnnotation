@@ -1,0 +1,9 @@
+[{
+  "textSpan1" : "This is what Charles ' Law states .",
+  "textSpan2" : "At constant pressure , the volume of a gas increases or decreases by the same factor as its temperature .",
+  "relation" : "ATTRIBUTION"
+}, {
+  "textSpan1" : "This is at constant pressure .",
+  "textSpan2" : "The volume of a gas increases or decreases by the same factor as its temperature .",
+  "relation" : "UNKNOWN_SUBORDINATION"
+}]
