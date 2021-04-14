@@ -549,7 +549,7 @@ DiscourseSimplifier initialized
 
 ### Step 1) CREATE SENTENCE DISCOURSE TREE ###
 
-Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... done [0,8 sec].
+Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... done [1,1 sec].
 
 Processing leaf:
 
@@ -696,11 +696,11 @@ ROOT
                                                                                                     └───────> .
                                                                                                               #69
 
-Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1,4 sec].
+Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1,8 sec].
 
-Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1,0 sec].
+Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1,3 sec].
 
-Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [0,8 sec].
+Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1,1 sec].
 
 Extraction rule SubordinationPostAttributionExtractor2 matched.
 
@@ -980,7 +980,7 @@ CO/UNKNOWN_COORDINATION (NULL, ROOT)
 
 # Charles' Law states that at constant pressure, the volume of a gas increases or decreases by the same factor as its temperature.
 
-a5d899ed09734feb937e774cf5a24461     0     The volume of a gas increases or decreases by the same factor as its temperature .
+8a818ba5012b489c94238b411d014821     0     The volume of a gas increases or decreases by the same factor as its temperature .
 	S:UNKNOWN_SUBORDINATION    This is at constant pressure .
 	S:ATTRIBUTION    This is what Charles ' Law states .
 

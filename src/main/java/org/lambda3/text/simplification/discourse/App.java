@@ -30,6 +30,9 @@ import org.lambda3.text.simplification.discourse.model.AnnotationContent;
 import org.lambda3.text.simplification.discourse.model.MatchedRule;
 import org.lambda3.text.simplification.discourse.model.SimplificationContent;
 import org.lambda3.text.simplification.discourse.utils.ner.NERStringParser;
+import org.lambda3.text.simplification.discourse.utils.parseTree.ParseTreeException;
+import org.lambda3.text.simplification.discourse.utils.parseTree.ParseTreeParser;
+import org.lambda3.text.simplification.discourse.utils.sentences.SentencesUtils;
 import org.lambda3.text.simplification.discourse.utils.tagging.TaggingUtils;
 import org.slf4j.LoggerFactory;
 
@@ -77,34 +80,37 @@ public class App {
         }
     }
 
-    private static void saveRelationsData(String corpusFile, DiscourseSimplifier simplifier, SimplificationContent content) {
+    private static void saveRelationsData(String corpusFile, DiscourseSimplifier simplifier,
+            SimplificationContent content) {
         String outputFilesPrefix;
         if (corpusFile.length() > 4) // If the given file is .txt
-            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4); 
+            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4);
         else
             outputFilesPrefix = corpusFile;
-        
+
         // Save the tsv file containing sentences and rhetorical relations in them.
-        saveLines(new File("relations_" + outputFilesPrefix + ".tsv"), 
-                  simplifier.getDiscourseTreeCreator().getRelationsIdentified());
-        saveLines(new File("pairs_of_sentences_relations_" + outputFilesPrefix + ".tsv"), 
-                  simplifier.getDiscourseTreeCreator().getPairOfSpansRelationsIdentified());
-        saveLines(new File("rules_matched_" + outputFilesPrefix + ".tsv"), 
-                  simplifier.getDiscourseTreeCreator().getRulesMatched());
+        saveLines(new File("relations_" + outputFilesPrefix + ".tsv"),
+                simplifier.getDiscourseTreeCreator().getRelationsIdentified());
+        saveLines(new File("pairs_of_sentences_relations_" + outputFilesPrefix + ".tsv"),
+                simplifier.getDiscourseTreeCreator().getPairOfSpansRelationsIdentified());
+        saveLines(new File("rules_matched_" + outputFilesPrefix + ".tsv"),
+                simplifier.getDiscourseTreeCreator().getRulesMatched());
 
-        saveLines(new File("relations_" + outputFilesPrefix + ".json"), 
-                  Arrays.asList(simplifier.getDiscourseTreeCreator().getRelationsIdentifiedObj().toString()));
-        saveLines(new File("pairs_of_sentences_relations_" + outputFilesPrefix + ".json"), 
-                  Arrays.asList(simplifier.getDiscourseTreeCreator().getPairOfSpansRelationsIdentifiedObj().toString()));
-        saveLines(new File("rules_matched_" + outputFilesPrefix + ".json"), 
-                  Arrays.asList(simplifier.getDiscourseTreeCreator().getRulesMatchedObj().toString()));
-
-        // Save simplified text - in simple text format not RTF
-        saveLines(new File(outputFilesPrefix + "_simplified" + ".txt"), 
-                  Arrays.asList(content.getSimplifiedSentencesAsSimpleText()));
+        saveLines(new File("relations_" + outputFilesPrefix + ".json"),
+                Arrays.asList(simplifier.getDiscourseTreeCreator().getRelationsIdentifiedObj().toString()));
+        saveLines(new File("pairs_of_sentences_relations_" + outputFilesPrefix + ".json"),
+                Arrays.asList(simplifier.getDiscourseTreeCreator().getPairOfSpansRelationsIdentifiedObj().toString()));
+        saveLines(new File("rules_matched_" + outputFilesPrefix + ".json"),
+                Arrays.asList(simplifier.getDiscourseTreeCreator().getRulesMatchedObj().toString()));
     }
 
     private static void performSimplification(String corpusFile, boolean toSaveRelationsData) throws IOException {
+        String outputFilesPrefix;
+        if (corpusFile.length() > 4) // If the given file is .txt
+            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4);
+        else
+            outputFilesPrefix = corpusFile;
+
         LOGGER.info("=======================================================================");
         LOGGER.info("Performing Discourse Simplification for file: " + corpusFile);
         LOGGER.info("=======================================================================");
@@ -112,8 +118,7 @@ public class App {
         // Create fresh discourse simplifier (and DiscourseTreeCreator)
         DiscourseSimplifier DISCOURSE_SIMPLIFIER = new DiscourseSimplifier();
         SimplificationContent content = DISCOURSE_SIMPLIFIER.doDiscourseSimplification(new File(corpusFile),
-                                                                                       ProcessingType.SEPARATE, 
-                                                                                       true);
+                ProcessingType.SEPARATE, true);
         content.serializeToJSON(new File("output.json"));
         saveLines(new File("output_default.txt"), Arrays.asList(content.defaultFormat(false)));
         saveLines(new File("output_flat.txt"), Arrays.asList(content.flatFormat(false)));
@@ -121,9 +126,12 @@ public class App {
         if (toSaveRelationsData)
             saveRelationsData(corpusFile, DISCOURSE_SIMPLIFIER, content);
 
+        // Save simplified text - in simple text format not RTF
+        saveLines(new File(outputFilesPrefix + "_simplified" + ".txt"),
+                Arrays.asList(content.getSimplifiedSentencesAsSimpleText()));
+
         LOGGER.info("done");
     }
-
 
     private static void performAnnotation(String corpusFile) throws IOException {
         LOGGER.info("=======================================================================");
@@ -133,30 +141,28 @@ public class App {
         // Create fresh discourse annotator (and DiscourseTreeCreator)
         SentenceAnnotator annotator = new SentenceAnnotator();
         List<AnnotationContent> annotations = annotator.doDiscourseAnnotation(new File(corpusFile),
-                                                                              ProcessingType.SEPARATE, 
-                                                                              true);
+                ProcessingType.SEPARATE, true);
 
         String outputFilesPrefix;
         if (corpusFile.length() > 4) // If the given file is .txt
-            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4); 
+            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4);
         else
             outputFilesPrefix = corpusFile;
-        
-        saveJSONLines(new File(outputFilesPrefix + "_annotated.json"), 
-                      annotations.stream().map(annotation -> {
-                                                   try {
-                                                       return annotation.serializeToJSON();
-                                                   } catch (JsonProcessingException e) {
-                                                       // TODO Auto-generated catch block
-                                                       e.printStackTrace();
-                                                       return "JsonProcessingException";
-                                                   }
-                                               }).collect(Collectors.toList()));
+
+        saveJSONLines(new File(outputFilesPrefix + "_annotated.json"), annotations.stream().map(annotation -> {
+            try {
+                return annotation.serializeToJSON();
+            } catch (JsonProcessingException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+                return "JsonProcessingException";
+            }
+        }).collect(Collectors.toList()));
 
         LOGGER.info("-----------------------------------------------------------------------");
 
-        for(AnnotationContent annotation : annotations) {
-            for(MatchedRule result : annotation.getMatchedRules()) {
+        for (AnnotationContent annotation : annotations) {
+            for (MatchedRule result : annotation.getMatchedRules()) {
                 LOGGER.info("Sentence annotation: ");
                 LOGGER.info(result.getDescription());
             }
@@ -166,8 +172,46 @@ public class App {
         LOGGER.info("done");
     }
 
+    private static void saveParseTrees(String corpusFile) throws IOException, ParseTreeException {
+        LOGGER.info("=======================================================================");
+        LOGGER.info("Saving the Parse Trees for file: " + corpusFile);
+        LOGGER.info("=======================================================================");
+
+        String outputFilesPrefix;
+        if (corpusFile.length() > 4) // If the given file is .txt
+            outputFilesPrefix = corpusFile.substring(0, corpusFile.length() - 4); 
+        else
+            outputFilesPrefix = corpusFile;
+        
+        List<String> treesAsString = new ArrayList<String>();
+        List<String> sentences = SentencesUtils.splitIntoSentencesFromFile(new File(corpusFile), 
+                                                                           true);
+
+        int i = 0;
+        for(String sentence : sentences) {
+            LOGGER.info("# Processing sentence " + (i + 1) + "/" + sentences.size() + " #");
+            treesAsString.add(ParseTreeParser.parse(sentence).toString());
+            i++;
+        }
+        
+        saveLines(new File("parse_trees_" + outputFilesPrefix + ".txt"), 
+                  treesAsString);
+ 
+        LOGGER.info("done");       
+    }
+
     public static void main(String[] args) throws IOException {
         performSimplification("input.txt", true);
         performAnnotation("input.txt");
+        
+        // To save the parse trees of the sentences given as input uncomment the following code:
+        /*
+        try {
+            saveParseTrees("corpus1_input.txt");
+        } catch (ParseTreeException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        */
     }
 }
